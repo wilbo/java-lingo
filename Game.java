@@ -50,6 +50,8 @@ public class Game {
 			// check ik the letter is right
 			if (answer[i] == last[i] || answer[i] == mAnswer.charAt(0)) {
 				buffer += answer[i];
+			} else if (mAnswer.indexOf(last[i]) >= 0) {
+				buffer += '+';
 			} else {
 				buffer += '_';
 			}
@@ -66,6 +68,8 @@ public class Game {
 			// write the letter
 			if (Character.isLetter(progress[i]) || Character.isLetter(buff[i])) {
 				newProgress += answer[i];
+			} else if (buff[i] == '+') {
+				newProgress += '+';
 			} else {
 				newProgress += '_';
 			}
@@ -81,7 +85,7 @@ public class Game {
 	}
 
 	public boolean isSolved() {
-		return getProgress().indexOf('_') == -1;
+		return mProgress.equals(mAnswer);
 	}
 
 }
