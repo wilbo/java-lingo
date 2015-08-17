@@ -7,6 +7,8 @@ This is lingo. Try to guess the word. Quick game rules are:
 
 To install & profit: 
 
+You may need the [Java Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+
 ```console
 $ git clone https://github.com/wilbo/java-lingo.git
 $ clear && javac Lingo.java && java Lingo <5 letter word>
